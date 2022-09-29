@@ -1,0 +1,24 @@
+Source: golang-github-hashicorp-go-uuid
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+           Anthony Fok <foka@debian.org>
+Section: devel
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-hashicorp-go-uuid
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-hashicorp-go-uuid.git
+Homepage: https://github.com/hashicorp/go-uuid
+XS-Go-Import-Path: github.com/hashicorp/go-uuid
+Rules-Requires-Root: no
+
+Package: golang-github-hashicorp-go-uuid-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: generate UUID-format strings using high quality random bytes
+ Generates UUID-format strings using high quality, purely random bytes.
+ It can also parse UUID-format strings into their component bytes.
